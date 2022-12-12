@@ -1,6 +1,353 @@
 header {
     border-bottom: 1px solid #ececec;
-    background-color: $white;
-    position: relative;
+    
+    @media screen and (max-width: 767px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
 }
+.main-logo {
+    color: $accent-color;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+    &__header {
+        color: $black;
+    }
+}
+.header__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media screen and (max-width: 767px) {
+        max-width: 767px;
+    }
+}
+
+
+.site__nav {
+    display: flex;
+    align-items: center;
+
+}
+.site-nav__list {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.site-nav__item {
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.site-nav__link {
+    display: block;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    color: $title-text-color;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.site-nav__link--current {
+    color: $accent-color;
+    display: block;
+    position: relative;
+    display: block;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+
+    &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 2px;
+    }
+}
+.header-contact{
+    display: flex;
+    
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+        align-content: center;
+    }
+}
+.header-contact__list {
+    margin-left: auto;
+}
+
+.header-contact__item+.header-contact__item {
+    margin-left: 50px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 0px;
+    }
+}
+.header-contact__item {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 0px;
+    }
+}
+
+
+.header-contact__link {
+    color: $primary-text-color;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    padding: 32px 0px 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .header-contact__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+// Для моб. версии 
+.mob-menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    padding: 15px 10px 48px 40px;
+    z-index: 999;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #212121;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    color: #212121;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+
+.mob-menu-list__item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mob-menu-list__link {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    color: #212121;
+
+    &:focus,
+    &:hover {
+        color: $accent-color;
+    }
+
+    &--current {
+        color: $accent-color;
+    }
+}
+
+.mob-menu-list__tell {
+    display: block;
+    margin-bottom: 32px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+}
+
+.mob-menu-list__mail {
+    display: block;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #757575;
+
+    margin-bottom: 64px;
+}
+
+.mob-menu-list__social {
+    display: flex;
+    flex-direction: row;
+
+    column-gap: 20px;
+}
+
+.mob-menu-list__social-item {
+    position: relative;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: #2196f3;
+
+    &:not(:first-child)::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -10px;
+        width: 1px;
+        height: 22px;
+        background-color: rgba(33, 33, 33, 0.2);
+    }
+}
+
+.mob-menu.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.header-contact__list {
+    display: flex;
+    margin-left: auto;
+}
+
+
+.header-contact__smartphone,
+.header-contact__envelope {
+    margin-right: 10px;
+    fill: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.header-contact__link:hover .header-contact__envelope,
+.header-contact__link:focus .header-contact__envelope {
+    fill: $accent-color;
+}
+
+.header-contact__link:hover .header-contact__smartphone,
+.header-contact__link:focus .header-contact__smartphone {
+    fill: $accent-color;
+}
+// Скрытый хедер 
+
+.site__nav{
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+}
+  
+.header-contact__list{
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+}
+.nav {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+.header-contact {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+        align-content: center;
+    }
+}
+
 
