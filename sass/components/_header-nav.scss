@@ -1,26 +1,27 @@
-.header-nav {
+.header__wrap {
     display: flex;
     align-items: center;
-}
-.site-nav {
-    display: flex;
+    
+  }
+
+.site__nav {
     margin-left: 93px;
-
-    &__link {
-            position: relative;
-        }
 }
 
-.site-nav .site-nav__item {
+.site-nav__list {
+    display: flex;
+}
+
+.site-nav__item {
     margin-right: 50px;
 }
 
-.site-nav .site-nav__item:last-child {
+.site-nav__item:last-child {
     margin-right: 0;
 }
 
 .site-nav__link {
-    display: block;
+    display: inline-block;
     padding-bottom: 32px;
     padding-top: 32px;
     color: $title-text-color;
@@ -60,3 +61,279 @@
         border-radius: 2px;
     }
 }
+
+.header-contact__list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }    
+}
+
+.header-contact__item {
+    @media screen and (min-width:1200px) {
+        align-items: center;
+    
+      &:first-child{
+          margin-right: 50px;
+      } 
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-bottom: 10px;
+       
+        &:last-child{
+          margin-bottom: 0;
+        }
+       }    
+}
+
+.header-contact__link {
+    color: $primary-text-color;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @media screen and(min-width:1200px) {
+        padding-top: 32px;
+      padding-bottom: 32px;
+    }    
+}
+
+
+// Для моб. версии 
+.page-header__nav-btn {
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    @media screen and (min-width:481px) {
+        display: none;
+    }
+}
+
+.page-header__icon-cross{
+    display: none;
+}
+  
+.page-header__nav-btn.is-open .page-header__icon-cross{
+    display: block;
+}
+  
+.page-header__nav-btn.is-open .page-header__icon-menu{
+    display: none;
+}
+
+// Скрытый хедер 
+
+.site__nav{
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+}
+  
+.header-contact__list{
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+}
+
+
+// Стили для мобильного
+
+.page-header__mobile-menu{
+    @media screen and (min-width:481px) {
+     display: none;
+    }
+   
+   
+   @media screen and (max-width:480px) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color:$white;
+        height: 796px;
+        padding: 48px 40px;
+        
+        &.is-open{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1;
+        }
+    }
+
+}
+   
+   
+   
+.page-header__mobile-nav-item{
+    @media screen and(max-width:480px) {
+       margin-bottom: 35px;
+   
+       &:last-child{
+         margin-bottom: 0;
+        }
+    }
+   
+}
+   
+.page-header__mobile-nav-link {
+   
+    font-family: inherit;
+    color: $title-text-color;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    transition: color 250ms $time-function;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+   
+    @media screen and (max-width:480px) {
+       
+     font-size: 40px;
+     line-height: 1.2;
+    }
+     
+}
+   
+.page-header__mobile-nav-link:hover,
+.page-header__mobile-nav-link:focus {
+    @media screen and (max-width:480px) {
+       
+       color: $accent-color;
+    }
+}
+.page-header__mobile-nav-link--current {
+    @media screen and (max-width:480px) {
+       
+       color: $accent-color;
+    }
+}
+   
+   
+   // STYLES FOR CONTACT MOBILE
+   
+.page-header__mobile-contacts-list{
+    @media screen and (max-width:480px) {
+       
+       margin-bottom: 64px;
+    }
+}
+   
+.page-header__mobile-contact-item{
+    @media screen and (max-width:480px) {
+       
+       margin-bottom: 32px;
+       &:last-child{
+         margin-bottom: 0;
+        }
+    }
+}
+   
+.page-header__mobile-contact-link {
+    color: $main-text-color;
+    font-weight: 500;
+    font-family: inherit;
+    letter-spacing: 0.02em;
+    transition: color 250ms $time-function;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    @media screen and (max-width:480px) {
+      
+       font-size: 34px;
+       line-height: 1.2; 
+    }
+
+    &:hover, &:focus{
+        color: $accent-color;
+    }
+   
+}
+   
+.mobile-menu-list{
+    display: flex;
+}
+   
+.mobile-menu-item{
+    border-right:  1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+    padding-left: 10px;
+   
+    &:last-child{
+       border-right: none;
+       padding-right: 0;
+    }
+    &:first-child{
+       padding-left: 0;
+    }
+}
+   
+.mobile-menu-link{
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: $accent-color;
+}
+
+// .site-nav__list {
+//     @media screen and (max-width:767px) {
+//         display: none;
+//     }
+// }
+
+// .header-contact__list {
+//     @media screen and (max-width:767px) {
+//         display: none;
+//     }    
+// }
+
+// .site-nav__list {
+//     display: flex;
+//     margin-left: 93px;
+
+//     &__link {
+//             position: relative;
+//         }
+// }
+
+// .site-nav__list .site-nav__item {
+//     margin-right: 50px;
+// }
+
+// .site-nav__list .site-nav__item:last-child {
+//     margin-right: 0;
+// }
+
+
+
+
+
+
+
+
