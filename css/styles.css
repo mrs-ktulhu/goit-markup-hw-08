@@ -892,7 +892,7 @@ textarea:focus {
   fill: none;
   background-color: var(--accent-color);
 
-  background-image: url(../images/svg-img/icon-checked.svg);
+  background-image: url(../img/svg/icon-checked.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 2px;
