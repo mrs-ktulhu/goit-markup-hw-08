@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="./js/modal.js">
+    <title>Document</title>
 </head>
 <body class="page">
 
@@ -101,14 +104,14 @@
 
         <!-- Блок-герой -->
         <section class="hero">
-            <div class="container">
+            <div class="hero__flex container">
                 <h1 class="hero__title">Ефективні рішення для <br> вашого бізнесу</h1>
                 <button type="button" class="hero__button blue-button" data-modal-open > Замовити послугу</button>
             </div>
         </section>
 
         <!-- Переваги/особливості -->
-        <section class="benefits">
+        <section class="benefits section">
             <div class="container">
                 <h2 class="visually-hidden" hidden>преимущества</h2>
                 <ul class="benefits__list list">
@@ -154,11 +157,17 @@
         </section>
 
         <!-- Фото чим займаються -->
-        <section class="activity">
+        <section class="activity section">
             <div class="container">
                 <h2 class="activity__title">Чим ми займаємося</h2>
                 <ul class="activity__list list">
-                    <li class="activity__item"><img class="activity__img" src="./img/studio/programmer-working.jpg" alt="Программист за работой" width="370">
+                    <li class="activity__item">
+                        <source srcset="
+                            ./images/images-studio/box1.jpg    1x,
+                            ./images/images-studio/box1@2x.jpg 2x"
+                            media="(min-width:1200px)"
+                        />
+                        <img class="activity__img" src="./img/studio/programmer-working.jpg" alt="Программист за работой" width="370">
                         <p class="activity__text">Десктопні додатки</p>
                     </li>
                     <li class="activity__item">
@@ -174,7 +183,7 @@
         </section>
 
         <!-- Спеціалісти -->
-        <section class="team">
+        <section class="team section">
             <div class="container">
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list list">
@@ -331,7 +340,7 @@
         </section>
 
         <!-- Клиенты -->
-        <section class="clients">
+        <section class="clients section">
             <div class="container">
                 <h2 class="clients__title">Постійні клієнти</h2>
                 <ul class="clients__list list">
