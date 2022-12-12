@@ -1,0 +1,107 @@
+.projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects__item {
+    position: relative;
+}
+
+.project__title {
+    color: $title-text-color;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.project__text {
+    color: $primary-text-color;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.project__overlay {
+
+    position: relative;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(+100%);
+    background-color: rgba(33, 150, 243, 0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    transform: translateY(+100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.project-description-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 1);
+}
+
+.project-position {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.project-border {
+    padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.project__link:hover .project__overlay,
+.project__link:focus .project__overlay {
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(0)
+}
+
+.projects__list {
+    position: relative;
+}
+
+.project-description-text {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+    transform: translate(-50%, -50%);
+    transform: scale(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    letter-spacing: 0.03em;
+    color: $white;
+}
+
+
+.project__link:hover .project-description-text,
+.project__link:focus .project-description-text {
+    transform: translate(-50%, -50%) scale(1);
+}
