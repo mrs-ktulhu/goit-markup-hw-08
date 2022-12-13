@@ -1293,14 +1293,23 @@ header {
 }
 
 .form {
-  width: 528px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
 }
+@media screen and (min-width: 480px) {
+  .form {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form {
+    width: 528px;
+  }
+}
 
 .form__title {
-  margin: auto;
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1322,9 +1331,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .form__label,
@@ -1342,13 +1348,13 @@ header {
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__input:hover,
 .form__input:focus {
-  outline: none;
   border-color: #2196f3;
 }
 
@@ -1430,14 +1436,27 @@ textarea:focus {
 }
 
 .policy-label {
-  margin-bottom: 30px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 15px;
+  font-size: 11px;
+  line-height: 1.14;
+}
+@media screen and (max-width: 479px) {
+  .policy-label {
+    font-size: 10px;
+    line-height: 1.11;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .policy-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form-checkbox {
@@ -1463,8 +1482,15 @@ textarea:focus {
 }
 
 .policy-link {
-  margin-left: 4px;
+  margin-left: 3px;
   color: rgb(33, 150, 243);
+}
+@media screen and (max-width: 479px) {
+  .policy-link {
+    position: absolute;
+    top: 18px;
+    left: 21px;
+  }
 }
 
 .form__btn {
@@ -1525,7 +1551,7 @@ textarea:focus {
 }
 
 .modal {
-  width: 528px;
+  width: 320px;
   min-height: 581px;
   background-color: #fff;
   position: relative;
@@ -1535,6 +1561,18 @@ textarea:focus {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .close-button {

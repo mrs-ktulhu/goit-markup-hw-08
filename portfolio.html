@@ -6,30 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="./js/modal.js">
 </head>
 
 <body class="page">
 
     <!-- Хедер -->
     <header class="header">
-        <div class="container">
+        <div class="container header__section">
             <div class="header-wrap">
-                <a class="main-logo link" href="./index.html">Web<span class="main-logo__header">Studio</span></a>
-                <nav>
+                <a class="main-logo logo link" href="./index.html">Web<span class="main-logo__header">Studio</span></a>
+                <nav class="site__nav">
                     <ul class="site-nav__list list">
                         <li class="site-nav__item"><a href="./index.html" class="site-nav__link link">Студія</a> </li>
                         <li class="site-nav__item"><a href="" class="site-nav__link link site-nav__link--current">Портфоліо</a></li>
                         <li class="site-nav__item"><a href="" class="site-nav__link link">Контакти</a></li>
                     </ul>
                 </nav>
-                <ul class="header-contact__list list">
+                <ul class="header-contact header-contact__list list">
                     <li class="header-contact__item">
                         <a href="mailto:info@devstudio.com" class="header-contact__link link">
                             <svg class="header-contact__envelope" width="16" height="12">
-                                <use href="./images/svg-img/icons.svg#icon-envelope-2"></use>
+                                <use href=".//img/svg/icons.svg#icon-envelope-2"></use>
                             </svg>
                             info@devstudio.com
                         </a>
@@ -37,12 +38,50 @@
                     <li class="header-contact__item">
                         <a href="tel:+380961111111" class="header-contact__link link">
                             <svg class="header-contact__smartphone" width="10" height="16">
-                                <use href="./images/svg-img/icons.svg#icon-smartphone-2"></use>
+                                <use href="./img/svg/icons.svg#icon-smartphone-2"></use>
                             </svg>
                             +38 096 111 11 11
                         </a>
                     </li>
                 </ul>
+            </div>
+            <!-- MOBILE -->
+            <button class="menu-open" data-menu-open>
+                <svg class="menu-burger" width="40" height="40">
+                  <use href="./img/svg/icons.svg#icon-burger"></use>
+                </svg>
+            </button>
+            
+            <div class="mob-menu flex is-hidden" data-menu>
+                <div>
+                    <button class="menu-close" data-menu-close>
+                        <svg class="menu-close" width="40" height="40">
+                            <use href="./img/svg/icons.svg#icon-close_mob"></use>
+                        </svg>
+                    </button>
+                    <ul class="mob-menu-list list">
+                        <li class="mob-menu-list__item">
+                        <a class="mob-menu-list__link link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                        <a class="mob-menu-list__link link mob-menu-list__link--current link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                        <a class="mob-menu-list__link link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mob-menu-list__down">
+                    <a class="mob-menu-list__tell link" href="tel:+380961111111">
+                    +38 096 111 11 11</a>
+                    <a class="mob-menu-list__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <ul class="mob-menu-list__social list">
+                        <li class="mob-menu-list__social-item">Instagram</li>
+                        <li class="mob-menu-list__social-item">Twitter</li>
+                        <li class="mob-menu-list__social-item">Facebook</li>
+                        <li class="mob-menu-list__social-item">LinkedIn</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -70,7 +109,7 @@
                             <div class="project-position">
                                 <img 
                                     class="project__img" 
-                                    src="./images/projects-img/tehnokryak.jpg" 
+                                    src="./img/projects/tehnokryak.jpg" 
                                     alt="Ноутбук" 
                                     width="370"
                                 />
@@ -88,7 +127,7 @@
                 <li class="projects__item">
                     <a href="\" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/new-orlean-vs-gs.jpg" alt="Баскетболісти" width="370">
+                            <img src="./img/projects/new-orlean-vs-gs.jpg" alt="Баскетболісти" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -104,7 +143,7 @@
                 <li class="projects__item">
                     <a href="\" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/the-seafood.jpg" alt="Лого з рибою" width="370">
+                            <img src="./img/projects/the-seafood.jpg" alt="Лого з рибою" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -120,7 +159,7 @@
                 <li class="projects__item">
                     <a href="\" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/headphones.jpg" alt="Навушники" width="370">
+                            <img src="./img/projects/headphones.jpg" alt="Навушники" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -136,7 +175,7 @@
                 <li class="projects__item">
                     <a href="\" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/boxes.jpg" alt="Коробки" width="370">
+                            <img src="./img/projects/boxes.jpg" alt="Коробки" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -152,7 +191,7 @@
                 <li class="projects__item">
                     <a href="\" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/no-borders.jpg" alt="Монітор з мапою" width="370">
+                            <img src="./img/projects/no-borders.jpg" alt="Монітор з мапою" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -168,7 +207,7 @@
                 <li class="projects__item">
                     <a href="\" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/limited-edition.jpg" alt="Журнал" width="370">
+                            <img src="./img/projects/limited-edition.jpg" alt="Журнал" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -184,7 +223,7 @@
                 <li class="projects__item">
                     <a href="/" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/labeltag.jpg" alt="Ярлик" width="370">
+                            <img src="./img/projects/labeltag.jpg" alt="Ярлик" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -200,7 +239,7 @@
                 <li class="projects__item">
                     <a href="/" class="project__link link">
                         <div class="project-position">
-                            <img src="./images/projects-img/growing-business.jpg" alt="Ноутбук" width="370">
+                            <img src="./img/projects/growing-business.jpg" alt="Ноутбук" width="370">
                             <div class="project__overlay">
                                 <p class="project-description-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                     Все це дозволить відвідувачу отримати
@@ -243,28 +282,28 @@
                         <li class="footer-social__item">
                             <a href="" class="footer-social__link link">
                                 <svg class="footer-social__icon ">
-                                    <use href="./images/svg-img/icons.svg#icon-instagram"></use>
+                                    <use href="./img/svg/icons.svg#icon-instagram"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="footer-social__item">
                             <a href="" class="footer-social__link link">
                                 <svg class="footer-social__icon ">
-                                    <use href="./images/svg-img/icons.svg#icon-twitter"></use>
+                                    <use href="./img/svg/icons.svg#icon-twitter"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="footer-social__item">
                             <a href="" class="footer-social__link link">
                                 <svg class="footer-social__icon ">
-                                    <use href="./images/svg-img/icons.svg#icon-facebook"></use>
+                                    <use href="./img/svg/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="footer-social__item">
                             <a href="" class="footer-social__link link">
                                 <svg class="footer-social__icon ">
-                                    <use href="./images/svg-img/icons.svg#icon-linkedin"></use>
+                                    <use href="./img/svg/icons.svg#icon-linkedin"></use>
                                 </svg>
                             </a>
                         </li>
@@ -276,7 +315,7 @@
                         <input class="footer-submit__input" type="email" name="submit-mail" id="submit-mail" placeholder="E-mail">
                         <button class="footer-submit__btn blue-button" type="submit">Підписатися
                             <svg class="telegram">
-                                <use href="./images/svg-img/icons.svg#icon-telegram"></use>
+                                <use href="./img/svg/icons.svg#icon-telegram"></use>
                             </svg>
                         </button>
                     </div>
@@ -285,6 +324,7 @@
         </div>
     
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
