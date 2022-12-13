@@ -2,14 +2,26 @@
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
 }
 
 .footer-flex {
-    display: flex;
+    display: block;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     list-style: none;
-    align-items: baseline;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px 165px;
+    }
+    @media (min-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        gap: 70px;
+    }
 }
 
 .main-logo__footer {
