@@ -24,6 +24,7 @@
         border-radius: 4px;
       
         border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: #2F303A;
         color: $white;
       
         &::placeholder {
@@ -40,13 +41,41 @@
     }
 
     &__btn {
-        width: 200px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
+        display: inline-flex;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
+      
+        border: none;
+        margin-top: 20px;
+        padding: 8px 29px;
+        border-radius: 4px;
+      
+        background-color: $accent-color;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        color: $white-text-color;
+      
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.06em;
+      
+        cursor: pointer;
+        min-height: 43px;
+      
+        @media (min-width: 1200px) {
+          margin-top: 0px;
+        }
+      
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 24px;
+          height: 20px;
+          margin-left: 10px;
+          background-image: url(../img/svg/icons.svg#icon-telegram);
+        }
     }
 }
 
