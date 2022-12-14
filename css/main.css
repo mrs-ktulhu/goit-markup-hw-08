@@ -141,8 +141,8 @@ header {
 .main-logo {
   color: #2196f3;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
   font-weight: 700;
+  font-size: 24px;
   line-height: 1.2;
   padding-bottom: 25px;
   padding-top: 25px;
@@ -150,6 +150,16 @@ header {
 }
 .main-logo__header {
   color: #000;
+}
+@media screen and (min-width: 767px) {
+  .main-logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .main-logo {
+    font-size: 26px;
+  }
 }
 
 .header__section {
@@ -171,6 +181,16 @@ header {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .site__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,6 +208,11 @@ header {
 @media screen and (max-width: 767px) {
   .site-nav__list {
     display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .site-nav__list {
+    margin-right: 90px;
   }
 }
 
@@ -278,7 +303,7 @@ header {
   color: #757575;
   font-weight: 500;
   line-height: 1.2;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.02em;
   padding: 32px 0px 32px;
   display: -webkit-inline-box;
@@ -298,6 +323,11 @@ header {
     padding: 0;
   }
 }
+@media screen and (min-width: 1199px) {
+  .header-contact__link {
+    font-size: 14px;
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-contact__item:not(:last-child) {
@@ -313,7 +343,7 @@ header {
   left: 0;
   right: 0;
   height: 796px;
-  padding: 48px 40px;
+  padding: 21px 15px 48px 40px;
   z-index: 999;
 }
 
@@ -340,6 +370,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0px 0px;
   width: 40px;
   height: 40px;
   background-color: transparent;
