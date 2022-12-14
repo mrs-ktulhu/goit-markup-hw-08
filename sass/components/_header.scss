@@ -26,6 +26,7 @@ header {
 
     @media screen and (min-width: 1199px) {
         font-size: 26px;
+        margin-right: 93px;
     }
 }
 .header__section {
@@ -42,7 +43,7 @@ header {
 @media screen and (min-width: 768px){
     .header-wrap{
         display: flex;
-        align-items: center;
+        justify-content: space-between;
     }
 
 }
@@ -122,9 +123,14 @@ header {
         flex-direction: column;
         align-content: center;
     }
+    
 }
 .header-contact__list {
     margin-left: auto;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-right: auto;
+    }
 }
 
 .header-contact__item+.header-contact__item {

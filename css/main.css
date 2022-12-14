@@ -159,6 +159,7 @@ header {
 @media screen and (min-width: 1199px) {
   .main-logo {
     font-size: 26px;
+    margin-right: 93px;
   }
 }
 
@@ -186,9 +187,9 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .site__nav {
@@ -282,6 +283,14 @@ header {
 
 .header-contact__list {
   margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+  .header-contact__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+  }
 }
 
 .header-contact__item + .header-contact__item {
