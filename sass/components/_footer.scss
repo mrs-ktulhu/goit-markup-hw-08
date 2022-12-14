@@ -23,10 +23,10 @@
     }
     @media (min-width: 1200px) {
         display: flex;
-        justify-content: center;
         text-align: left;
         gap: 16px;
         flex-wrap: nowrap;
+        justify-content: space-between;
     }
 }
 
