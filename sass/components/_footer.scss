@@ -4,6 +4,11 @@
     padding-bottom: 60px;
     text-align: center;
 }
+@media screen and (min-width: 768px){
+    .footer__contacts{
+        justify-content: center;
+    }
+}
 
 .footer-flex {
     display: block;
@@ -21,6 +26,7 @@
         justify-content: center;
         text-align: left;
         gap: 70px;
+        flex-wrap: nowrap;
     }
 }
 
@@ -31,4 +37,5 @@
     font-weight: 700;
     line-height: 1.2;
     padding-bottom: 20px;
+    align-items: center;
 }

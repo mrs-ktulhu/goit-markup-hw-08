@@ -1,5 +1,6 @@
 header {
     border-bottom: 1px solid #ececec;
+    justify-content: space-between;
     
     @media screen and (max-width: 767px) {
         padding-top: 16px;
@@ -22,6 +23,11 @@ header {
     }
     @media screen and (min-width: 767px) {
         margin-right: 88px;
+        margin-left: auto;
+        &__ftr{
+            margin-right: auto;
+        }
+        
     }
 
     @media screen and (min-width: 1199px) {
@@ -117,11 +123,13 @@ header {
     
     @media screen and (max-width: 767px) {
         display: none;
+        
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         flex-direction: column;
         align-content: center;
+        justify-content: center;
     }
     
 }
